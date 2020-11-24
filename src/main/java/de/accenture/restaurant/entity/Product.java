@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 
 @Entity
-@Table(name = "dishes-list")
+@Table(name = "dishes_list")
 public class Product {
 
     @Id

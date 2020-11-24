@@ -43,8 +43,8 @@ public class ProductService {
     // to get by name like with Id , So we need to Create a function
     // in the repository class and call it here
 
-    public Product getProductByname(String name){
-        return repository.findByName(name);
+    public Product getProductByname(String title){
+        return repository.findByTitle(title);
     }
 
 

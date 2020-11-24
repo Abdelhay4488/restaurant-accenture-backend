@@ -44,9 +44,9 @@ public class ProductController {
     }
 
     //Get Product by Name
-    @GetMapping("/productByName/{name}")
-    public Product findProductByName(@PathVariable String name){
-        return service.getProductByname(name);
+    @GetMapping("/productByName/{title}")
+    public Product findProductByName(@PathVariable String title){
+        return service.getProductByname(title);
     }
 
     // Get a list of Products
