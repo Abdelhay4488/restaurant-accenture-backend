@@ -4,11 +4,15 @@ package de.accenture.restaurant.controller;
 import de.accenture.restaurant.entity.Product;
 import de.accenture.restaurant.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.function.EntityResponse;
 
 import java.util.List;
 
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class ProductController {
 
@@ -50,6 +54,7 @@ public class ProductController {
     }
 
     // Get a list of Products
+
     @GetMapping("/products")
     public List<Product> findAllProducts(){
         return service.getProducts();
